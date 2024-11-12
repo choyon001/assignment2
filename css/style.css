@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 .inter{
   font-family: "Inter", sans-serif;
@@ -8,10 +9,23 @@
   /* font-style: normal; */
 }
 
+@font-face {
+    font-family: 'Miama';
+    src: url('../fonts/Miama-Regular.ttf') format('truetype');
+    font-weight: 400;
+    /* font-style: normal; */
+}
+
+.miama{
+    font-family: "Miama", sans-serif;
+}
+
 body{
     background: rgba(17, 17, 17, 1);
 }
-
+.display-flex{
+    display: flex;
+}
 .nav-bar {
     display: flex;
     justify-content: space-between;
@@ -58,20 +72,182 @@ body{
 .dropdown-icon{
     display: none;
 }
+
+
+
+
+
+
+
+
+
+
+/* banner section */
+.banner{
+    display: flex;
+    max-width: 1060px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+.content{
+    color: white;
+}
+.title{
+    font-size: 5rem;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1.2;
+}
+.banner-img{
+    position: relative;
+    width: 80%;
+}
+
+.description{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.btn-primary{
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    border-radius: 40px;
+    padding: 16px 40px;
+    background-color: rgba(230, 83, 60, 1);
+}
+
+.btn-secondary{
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 40px;
+    padding: 16px 40px;
+    background-color: rgba(255, 255, 255, .01);
+}
+.btn-div{
+    display: flex;
+    gap: 2rem;
+}
+.btn-workout {
+    position: absolute;
+    top: 30%;
+    left: 50%; 
+    
+    background-color:rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-align: start;
+}
+.btn-tut {
+    position: absolute;
+    top: 70%;
+    left: -10%; 
+    
+    background-color:rgba(48, 48, 48, 0.54);
+    
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: start;
+}
+#number{
+    color: rgba(255, 255, 255, 1);
+font-size: 2rem;
+font-weight: 800;
+line-height: 40px;
+letter-spacing: 1px;
+
+}
+#video{
+    color:  rgba(255, 255, 255, 0.65);
+    font-family: Inter;
+font-size: .9rem;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 1px;
+
+}
+
+
+
 @media (max-width: 768px) {
+    /* Hide the desktop navigation and show the dropdown icon */
     .fitnav ul {
         display: none;
     }
     .dropdown-icon {
         display: block;
-        cursor: pointer;
         color: white;
     }
     .nav-div {
-        justify-content: space-between;
+        
+        justify-content: space-around;
     }
     .nav-bar {
         padding: 10px;
     }
+
+    /* Adjust banner section layout for small devices */
+    .banner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .content {
+        padding: 0 1rem;
+    }
+
+    .title {
+        font-size: 3rem; /* Reduce font size for smaller screens */
+        line-height: 1.1;
+    }
     
+    .description {
+        font-size: 1rem;
+    }
+
+    .btn-div {
+        flex-direction: column;
+        gap: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    /* Make the image smaller and center it */
+    .banner-img {
+        width: 80%;
+        padding: 0 1rem;
+    }
+
+    /* Adjust button positioning over the image for smaller screens */
+    .btn-workout {
+        top: 40%; /* Adjust positioning */
+        left: 50%;
+        
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+    .btn-tut {
+        top: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    /* Adjust font sizes within buttons */
+    #number {
+        font-size: 1.5rem;
+        line-height: 30px;
+    }
+    #video {
+        font-size: 0.9rem;
+    }
 }
