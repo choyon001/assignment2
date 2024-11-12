@@ -176,8 +176,105 @@ letter-spacing: 1px;
 
 
 
+/* habit section */
+.habit{
+    max-width: 1060px;
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.habit-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+#habit-title{
+font-size: 48px;
+font-weight: 800;
+line-height: 2px;
+}
+
+#habit-description{
+color: rgba(255, 255, 255, 0.5);
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+text-align: center;
+
+}
+.habit-type{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: start;
+    margin: 0px auto;
+    gap: 20px;
+}
+
+.habit-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.habit-card img{
+    width: 80%;
+    height: 80%x;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.img-title{
+font-size: 18px;
+font-weight: 600;
+margin-bottom: 0px;
+
+}
+.img-description{
+    color: rgba(255, 255, 255, 0.5);
+font-size: 14px;
+font-weight: 400;
+line-height: 1.1;
+text-align: center;
+}
+
+.run{
+    display: flex;
+    max-width: 1060px;
+    margin: 0 auto;
+    gap: 10%;
+    background-color: rgba(34, 34, 34, 1);
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+}
+.run-content{
+    padding: 5%;
+}
+.run-img img{
+    width: 80%;
+    border-radius: 18px ;
+   
+}
+#run-title{
+    color: rgba(255, 255, 255, 1);
+font-size: 48px;
+font-weight: 900;
+line-height: 57.6px;
+
+}
+#run-description{
+    color: rgba(255, 255, 255, 0.5);
+font-size: 14px;
+font-weight: 400;
+line-height: 1.1;
+}
+
 @media (max-width: 768px) {
-    /* Hide the desktop navigation and show the dropdown icon */
+   
     .fitnav ul {
         display: none;
     }
@@ -193,7 +290,7 @@ letter-spacing: 1px;
         padding: 10px;
     }
 
-    /* Adjust banner section layout for small devices */
+   
     .banner {
         flex-direction: column;
         align-items: center;
@@ -206,7 +303,7 @@ letter-spacing: 1px;
     }
 
     .title {
-        font-size: 3rem; /* Reduce font size for smaller screens */
+        font-size: 3rem;
         line-height: 1.1;
     }
     
@@ -220,15 +317,15 @@ letter-spacing: 1px;
         padding-bottom: 1rem;
     }
 
-    /* Make the image smaller and center it */
+    
     .banner-img {
         width: 80%;
         padding: 0 1rem;
     }
 
-    /* Adjust button positioning over the image for smaller screens */
+    
     .btn-workout {
-        top: 40%; /* Adjust positioning */
+        top: 40%;
         left: 50%;
         
         font-size: 1rem;
@@ -242,7 +339,6 @@ letter-spacing: 1px;
         padding: 8px 16px;
     }
 
-    /* Adjust font sizes within buttons */
     #number {
         font-size: 1.5rem;
         line-height: 30px;
@@ -250,4 +346,28 @@ letter-spacing: 1px;
     #video {
         font-size: 0.9rem;
     }
+
+    .habit-type{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: start;
+        margin: 0px auto;
+        gap: 20px;
+    }
+    .run {
+        flex-direction: column; 
+        gap: 1.5rem; 
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .run-img img {
+        width: 80%;
+       
+}
+#habit-title{
+    font-size: 1rem;
+}
 }
