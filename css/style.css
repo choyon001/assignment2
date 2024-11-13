@@ -428,7 +428,73 @@ form button{
 
 
 
+/* treainers */
 
+.team {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+   
+}
+
+.team h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.team p {
+    font-size: 16px;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding-top: 20px;
+}
+
+.team-member {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    }
+
+.team-member img {
+    width: 80%;
+    height: 80%;
+    border-radius: 8px;
+   
+}
+
+
+.member-info {
+    position: absolute;
+    bottom: 25%;
+    left: 16%;
+    color: #fff;
+}
+
+.member-name {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: start;
+}
+
+.member-position {
+    text-align: start;
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
 
 @media (max-width: 768px) {
     /* Navbar */
@@ -576,5 +642,15 @@ form button{
     table, td, th {
         font-size: 12px; 
         padding: 8px; 
+    }
+
+    .team h2 {
+        font-size: 1rem;
+    }
+    .team p {
+        font-size: .7rem;
+    }
+    .team-grid {
+        grid-template-columns: 1fr;
     }
 }
